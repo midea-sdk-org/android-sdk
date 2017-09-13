@@ -1,24 +1,16 @@
 ![美的智慧家居科技有限公司](http://msmart.midea.com/images/brand.png)   
-Copyright 2017 
-Midea Smart Technology Co.,Ltd.  
 
-----
+# MideaSDK 3.0 快速集成文档
 
-# API文档
-- [家庭组API文档](./doc/javadoc_family/index.html);  
-- [单用户API文档](./doc/javadoc_user/index.html);  
+====================
 
-# SDK下载
-- [家庭组SDK](./lib/MideaSDK-3.1.3(IPF-R66EC).zip);
-- [单用户SDK](./lib/MideaSDK-3.1.3(IPU-R66EC).zip);
+Copyright 2017 Midea Smart Technology Co.,Ltd.  
 
-# MideaSDK 3.0 集成说明
-
-# 概述
+## 概述
 Midea SDK是美的智慧家居系统控制端接入的一套Android系统开发工具包，第三方开发者可以使用这套工具包提供的接口接入到美的智慧家居系统中实现本地或者远程控制美的家电。  
 SDK适用的场景包括：手机、机电盒、智能电视、智能硬件设备等。
 
-# 功能
+## 功能
 SDK主要提供的功能包括：   
 1.  账号注册登陆。     
 2.  设备配网和云端绑定。
@@ -27,18 +19,18 @@ SDK主要提供的功能包括：
 5.  服务器业务请求封装。    
 6.  设备协议可视化解析。    
 	   
-# 业务介绍  
+## 业务介绍  
 SDK分为家庭业务模型和单用户业务模型。    
  1.单用户模型：家电设备直接与用户进行绑定，单个设备在用户之间进行分享。  
  2.家庭模型：家电和家庭进行关联，无法实现单个设备分享，用户通过加入家庭进行家庭中所有设备的全部共享。
  > 推荐使用单用户模型，因为数据模型耦合度低，扩展性好。但是如果需要和美居进行数据互通，则需要使用家庭租模型。
 
-# 代码目录介绍
+## 代码目录介绍
 - DemoFamily: 家庭组业务模型Demo。  
 - DemoNormal: 单用户业务模型Demo。  
 - MSmartSDK: SDK源代码。  
 
-# SDK使用前准备
+## SDK使用前准备
 1. 注册美的智慧家居开发者账号。
 2. 可上网2.4G路由器一台。
 3. 美的智能家电一台。
@@ -51,7 +43,7 @@ SDK分为家庭业务模型和单用户业务模型。
 
  **登陆美的智慧家居开发者官网申请AppID,AppKey,AppSrc：**[开发者官网](https://iot.midea.com/develop)
 
-# 开发流程
+## 开发流程
 
 1. 注册开发者。
 2. 体检开发申请。   
@@ -60,7 +52,7 @@ SDK分为家庭业务模型和单用户业务模型。
 5. 集成配网SDK。  
 6. 开发审核发布。
 
-# SDK配置
+## SDK配置
 > 从官网下载的SDK包里面包含了**jar**, **javadoc**,**jni**三个目录，分别代表jar文件，API文件，SO库文件。
 
 配置步骤如下：
@@ -91,7 +83,7 @@ Android权限配置如下：
 >- 因为Android 6.0及以上系统的限制，网络操作一般需要打开GPS开关，请在系统设置界面位置信息里面开启位置信息。
 
 
-# 功能业务介绍
+## 功能业务介绍
 > 按照SDK所提供的功能分类进行介绍SDK如何进行快速接入使用。  
 
 ### 业务流程
@@ -269,7 +261,7 @@ void updateDeviceState(String deviceID,Map<String,String> stateMap,MSmartDataCal
 
 > 说明：每一个美的家电都有一份Profie定义文档，请在开放官网进行下载查看。
 
-# SDK事件
+## SDK事件
 SDK的事件通过事件码进行区分，事件码定义在MSmartEventCode这个接口中。
 相关的接口：
 
@@ -280,7 +272,7 @@ MSmartSDK | removeSDKEventListener | 取消事件监听
 
 > 注意：不同的事件所携带返回的数据不同，请仔细阅读MSmartEventCode这个类关于各个事件码的定义及返回数据。
 
-# SDK推送
+## SDK推送
 SDK的事件上报比较依赖推送，因此需要配置推送。SDK使用了极光推送组件，相关的推送KEY需要联系技术支持人员进行分配，后续会在开发者官网进行自动化申请。推送需要APP进行配置，并没有集成在SDK中，APP在收到推送之后需要将推送消息派发给SDK进行处理，SDK处理完毕后会以不同的事件回调的方式通知到APP。  
 相关的接口：
 
@@ -292,7 +284,7 @@ MSmartSDK | handlePushMessage | 处理推送消息
 
 
 
-# 其它接口说明
+## 其它接口说明
 1. 开启SDK日志:
 
 接口名称 | 方法名称 | 接口说明
@@ -307,5 +299,13 @@ MSmartUserDeviceManager/MSmartFamilyDeviceManager  | syncCloudData | 与云端�
 
 > 说明：登陆的时候会对云端数据进行本地缓存，以加快业务接口速度，如果涉及到一个账号多端登陆，为避免拉取设备列表/家庭列表与服务器出现不一致，可以调用syncCloudData进行数据同步。
 
-# 技术支持
+## 技术支持
 - 王攀(pan.wang@midea.com)
+
+## API文档
+- [家庭组API文档](./doc/javadoc_family/index.html);  
+- [单用户API文档](./doc/javadoc_user/index.html);  
+
+## SDK下载
+- [家庭组SDK](./lib/MideaSDK-3.1.3(IPF-R66EC).zip);
+- [单用户SDK](./lib/MideaSDK-3.1.3(IPU-R66EC).zip);
