@@ -1,5 +1,6 @@
-# ![Midea Smart Technology Co., LTD.](http://msmart.midea.com/images/brand.png)  MideaSDK 3.0 Quick User Manual
-Copyright 2017 Midea Smart Technology Co.,Ltd.
+![Midea Smart Technology Co., LTD.](http://msmart.midea.com/images/brand.png) 
+# MideaSDK 3.0 Quick User Manual
+> Copyright 2017 Midea Smart Technology Co.,Ltd.
 
 
 # 1. Abstract
