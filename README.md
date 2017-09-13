@@ -1,12 +1,16 @@
 ![美的智慧家居科技有限公司](http://msmart.midea.com/images/brand.png) 
+Copyright 2017 
+Midea Smart Technology Co.,Ltd.  
+
+----
 
 # API文档
-- [家庭组API文档](./api/javadoc_family/index.html);  
-- [单用户API文档](./api/javadoc_user/index.html);  
+- [家庭组API文档](./doc/javadoc_family/index.html);  
+- [单用户API文档](./doc/javadoc_user/index.html);  
 
 # SDK下载
-- [家庭组SDK](./MideaSDK/MideaSDK-3.1.3(IPF-R66EC).zip);
-- [单用户SDK](./MideaSDK/MideaSDK-3.1.3(IPU-R66EC).zip);
+- [家庭组SDK](./lib/MideaSDK-3.1.3(IPF-R66EC).zip);
+- [单用户SDK](./lib/MideaSDK-3.1.3(IPU-R66EC).zip);
 
 # MideaSDK 3.0 集成说明
 
