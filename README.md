@@ -1,4 +1,4 @@
-![美的智慧家居科技有限公司](http://msmart.midea.com/images/brand.png) 
+![美的智慧家居科技有限公司](http://msmart.midea.com/images/brand.png)   
 Copyright 2017 
 Midea Smart Technology Co.,Ltd.  
 
